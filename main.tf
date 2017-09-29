@@ -10,7 +10,7 @@ module "listener_rule_home" {
 }
 
 module "ecs_update_monitor" {
-  source = "github.com/mergermarket/tf_ecs_update_monitor"
+  source = "github.com/mergermarket/tf_ecs_update_monitor?ref=support-assuming-role"
 
   cluster = "${var.ecs_cluster}"
   service = "${module.service.name}"
