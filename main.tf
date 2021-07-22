@@ -68,7 +68,7 @@ module "service_container_definition" {
     var.secrets
   )}"
 
-  labels {
+  labels = {
     component          = "${lookup(var.release, "component")}"
     env                = "${var.env}"
     team               = "${lookup(var.release, "team")}"
